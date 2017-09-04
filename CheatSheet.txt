@@ -1,0 +1,39 @@
+S O M E  B A S I C  C O M M A N D S  F O R  G I T H U B
+
+cmd1: git init
+   Initializes a Git repository...just go to the desired folder...run Git Bash and type the command.
+   Once the folder is initialized we can run other commands
+   This command creates a hidden ".git" named folder in that location and which folder contains other staffs used for organization
+
+cmd2: git add <file_name>
+   Adds file(s) to staging area
+   We can run the command as many times as we want to take the file to staging area
+
+cmd3: git status
+   To see what we have in staging area (i.e, ready for commiting) we use this command.
+   It cheaks status of the working tree
+   Throw it we can differentiate the working tree (marked as red) and staging area (marked as green).
+
+cmd4: git commit
+   Commits changes in index i.e, takes everything from index to staging area and puts them into the local repository
+
+cmd5: git push
+   Takes everything from local repository and push them into remote repository
+
+cmd6: git pull
+   Pulls the latest changes from remote repository...used to get the latest version from the remote repository
+
+cmd7: git clone
+   Copies a remote repository into the current folder...i.e, downloads the remote repository
+
+cmd8: touch file_name.file_type
+   Creates an empty file of this name and type.
+
+cmd9: git config --global user.name '<name>'
+   Sets user name
+
+cmd10: git config --global user.email 'xxxxx@yyyy.com'
+
+#To see Git Status in a particular branch: git status
+#To add a particular file: git add <file name>
+#To add all files: git add *
