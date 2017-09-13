@@ -8,14 +8,39 @@ cmd1: git init
 cmd2: git add <file_name>
    Adds file(s) to staging area
    We can run the command as many times as we want to take the file to staging area
+   Even if a file is changed while it is in staging area we need to add the file again
+
+cmd3: git add *.file_type
+   Adds all files of the mentioned type to staging area from the folder (working area).
+
+cmd4: git add .
+   Adds all files of all types to staging area from the folder (working area).
+
+cmd: git reset <file_name>
+   Unstages a file while retaining the changes in working directory
+
+cmd3: git rm --cached file_name.file_type
+   It removes the particular file from the project and stage the removal for commit
+
+cmd: git move <existing_path> <new_path>
+   Changes an existing file path and stage the move
+
+cmd: git log --stat -M
+   
 
 cmd3: git status
    To see what we have in staging area (i.e, ready for commiting) we use this command.
    It cheaks status of the working tree
-   Throw it we can differentiate the working tree (marked as red) and staging area (marked as green).
+   Throw it we can differentiate the files in working tree (marked as red i.e, they are unttacked) and staging area (marked as green).
+
+cmd: git diff
+   Shows what is changed but not staged
+
+cmd: git diff --staged
+   Shows what is staged but not committed yet
 
 cmd4: git commit
-   Commits changes in index i.e, takes everything from index to staging area and puts them into the local repository
+   Commits changes in index i.e, takes everything from index to staging area and puts them into the local repository...i.e, taking snapshot
 
 cmd5: git push
    Takes everything from local repository and push them into remote repository
@@ -23,7 +48,7 @@ cmd5: git push
 cmd6: git pull
    Pulls the latest changes from remote repository...used to get the latest version from the remote repository
 
-cmd7: git clone
+cmd7: git clone <url>
    Copies a remote repository into the current folder...i.e, downloads the remote repository
 
 cmd8: touch file_name.file_type
@@ -34,6 +59,24 @@ cmd9: git config --global user.name '<name>'
 
 cmd10: git config --global user.email 'xxxxx@yyyy.com'
 
-#To see Git Status in a particular branch: git status
-#To add a particular file: git add <file name>
-#To add all files: git add *
+cmd: git commit -m 'commit message'
+   Every commit needs a commit message
+   Commiting is done when we are happy with the changes whatever we made and want to put them to staging area
+	
+cmd: git checkout
+   Switch to another branch and check it out into my working directory
+
+cmd: git log
+   shows all commit in current branch history
+
+cmd: git log branchA..branchB
+   Shows the commits on branchA that are not on branchB
+
+cmd: git log --follow <file_name>
+   Shows the commits that changed the file even across renames
+
+cmd: git diff branchB...branchA
+   Shows the differences of what is in branchA but not in branchB
+
+cmd: git show <SHA>
+   Show any object in Git in human readable format
